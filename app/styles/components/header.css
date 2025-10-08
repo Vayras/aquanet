@@ -213,6 +213,17 @@ header.scrolled {
   padding: 1rem 1.5rem; /* 16px 24px */
 }
 
+#aqua-header-mobile-menu .aqua-header-button .aqua-button {
+  font-size: 1rem; /* 16px */
+  background-color: var(--aqua-blue-200);
+  color: var(--palatinate-blue-750);
+}
+
+#aqua-header-mobile-menu .aqua-header-button .aqua-button:hover {
+  background-color: var(--aqua-blue-300);
+  color: var(--palatinate-blue-750);
+}
+
 /* Mobile Modal */
  #aqua-header-mobile-menu {
     position: fixed;
@@ -244,6 +255,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     text-align: center;
+    padding-top: 3.4375rem; /* 55px */
 }
 
 #aqua-header-mobile-menu .aqua-header-nav ul {
@@ -278,9 +290,9 @@ header.scrolled {
 }
 
 #aqua-header-mobile-menu .aqua-header-nav a:link {
-    font-size: var(--h4-font-size);
-    letter-spacing: var(--h4-letter-spacing);
-    line-height: var(--h4-line-height);
+    font-size: 1.5rem; /* 24px */
+    letter-spacing: 0;
+    line-height: 2.1rem;
 }
 
 #aqua-mobile-header .aqua-logo.mobile-modal-on {

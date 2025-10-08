@@ -78,10 +78,10 @@ export default function Header() {
             <div className="aqua-navigation">
              <ul className="nav">
 
-        <li className="nav-home nav-current"><a href="https://aqua.net/" data-translate-key="Home">Home</a></li>
-        <li className="nav-features"><a href="https://aqua.net/features/" data-translate-key="Features">Features</a></li>
+        <li className="nav-home nav-current"><a href="/" data-translate-key="Home">Home</a></li>
+        <li className="nav-features"><a href="/features" data-translate-key="Features">Features</a></li>
         <li className="nav-contact-us"><a href="https://jan3.zendesk.com/hc/en-us" data-translate-key="Contact Us">Contact Us</a></li>
-        <li className="nav-faq"><a href="https://aqua.net/#faq" data-translate-key="FAQ">FAQ</a></li>
+        <li className="nav-faq"><a href="/#faq" data-translate-key="FAQ">FAQ</a></li>
 
     </ul>
             </div>
