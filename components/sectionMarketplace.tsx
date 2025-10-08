@@ -1,17 +1,33 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function SectionMarketplace() {
   return (
-    <section className="section-centered section-white" data-animate-slide-up-on-intersect-frame>
+    <section className="section-centered section-white">
       <div className="section-content">
-        <div className="section-text" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-text"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h3 className="section-title">
             A MARKETPLACE OF OPPORTUNITIES
           </h3>
           <p className="text-subtitle font-semi-bold">
             Unleash Bitcoin's full potential with AQUA. Gain instant access to Layer 2 for faster, smarter transactions.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="section-media" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-media"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <div className="aqua-cards three-cards inverse-colors">
             <article className="aqua-card">
               <div className="aqua-card-icon dynamic-fill">
@@ -65,7 +81,7 @@ export default function SectionMarketplace() {
               </p>
             </article>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,17 +1,32 @@
+"use client"
+import { motion } from "framer-motion";
+
 export default function SectionCenteredOne() {
   return (
-    <section className="section-centered" data-animate-slide-up-on-intersect-frame>
+    <section className="section-centered">
       <div className="section-content">
-        <div className="section-text" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-text"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h3 className="section-title">
             ALL IN ONE BITCOIN WALLET
           </h3>
           <p className="text-subtitle font-semi-bold">
             Save in Bitcoin and transact efficiently with Lightning, Liquid, and Tether USDt. Easily swap assets, buy Bitcoin, and much, much more!
           </p>
-        </div>
+        </motion.div>
 
-        <div className="section-media" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-media"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <div className="aqua-cards three-cards">
             <article className="aqua-card">
               <div className="aqua-card-icon dynamic-fill">
@@ -59,9 +74,9 @@ export default function SectionCenteredOne() {
               </p>
             </article>
           </div>
+      </motion.div>
         </div>
         <div className="section-background-container"></div>
-      </div>
     </section>
   );
 }

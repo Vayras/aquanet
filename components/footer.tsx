@@ -78,9 +78,9 @@ export default function Footer() {
           </form>
           <small className="required-recaptcha-notice">
             This site is protected by reCAPTCHA and the Google{" "}
-            <a href="https://policies.google.com/privacy">Privacy Policy</a>
+            <a href="https://policies.google.com/privacy" className="" style={{color: "#0D6EFD"}}>Privacy Policy</a>
             {" "}and{" "}
-            <a href="https://policies.google.com/terms">Terms of Service</a>
+            <a href="https://policies.google.com/terms" style={{color: "#0D6EFD"}}>Terms of Service</a>
             {" "}apply.
           </small>
 
@@ -88,10 +88,10 @@ export default function Footer() {
             <div className="footer-link-group">
               <div className="aqua-navigation">
                 <ul className="nav">
-                  <li className="nav-home"><a href="https://aquawallet.io/">Home</a></li>
-                  <li className="nav-features"><a href="https://aquawallet.io/features">Features</a></li>
-                  <li className="nav-contactus"><a href="https://aquawallet.io/contactus">Contact Us</a></li>
-                  <li className="nav-faq"><a href="https://aquawallet.io/#faq">FAQ</a></li>
+                  <li className="nav-home"><a href="/">Home</a></li>
+                  <li className="nav-features"><a href="/features">Features</a></li>
+                  <li className="nav-contactus"><a href="https://jan3.zendesk.com/hc/en-us">Contact Us</a></li>
+                  <li className="nav-faq"><a href="/#faq">FAQ</a></li>
                 </ul>
               </div>
             </div>

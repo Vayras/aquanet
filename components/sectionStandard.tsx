@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import DownloadButton from "./downloadButton";
+
 
 export default function SectionStandard() {
     const handleAquaDownloadModal = () => {

@@ -38,9 +38,9 @@ export default function Header() {
   return (
     <>
       {/* Mobile Header */}
-      <header id="aqua-mobile-header" className={isScrolled ? "scrolled" : ""}>
+      <header id="aqua-mobile-header" className={`${isScrolled && !mobileMenuOpen ? "scrolled" : ""} ${mobileMenuOpen ? "mobile-menu-active" : ""}`}>
         <div className="aqua-header-container">
-          <a className="aqua-header-logo-link" href="https://aquawallet.io/">
+          <a className="aqua-header-logo-link" href="/">
             <Image
               src="/assets/images/logos/aqua-logo.svg"
               className="aqua-logo mobile-modal-off"
@@ -58,7 +58,7 @@ export default function Header() {
           </a>
           <div className="aqua-header-controls aqua-header-mobile-controls">
             <div
-              className="aqua-header-burger"
+              className={`aqua-header-burger ${mobileMenuOpen ? "on" : ""}`}
               id="aqua-header-burger"
               onClick={toggleMobileMenu}
             >
@@ -70,10 +70,43 @@ export default function Header() {
         </div>
       </header>
 
+      {/* Mobile Menu Modal */}
+      <div id="aqua-header-mobile-menu" className={mobileMenuOpen ? "on" : ""}>
+        <div className="aqua-header-nav-container">
+          <div className="aqua-header-nav">
+            
+            <div className="aqua-navigation">
+             <ul className="nav">
+
+        <li className="nav-home nav-current"><a href="https://aqua.net/" data-translate-key="Home">Home</a></li>
+        <li className="nav-features"><a href="https://aqua.net/features/" data-translate-key="Features">Features</a></li>
+        <li className="nav-contact-us"><a href="https://jan3.zendesk.com/hc/en-us" data-translate-key="Contact Us">Contact Us</a></li>
+        <li className="nav-faq"><a href="https://aqua.net/#faq" data-translate-key="FAQ">FAQ</a></li>
+
+    </ul>
+            </div>
+          </div>
+          <div className="aqua-header-button">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                return handleAquaDownloadModal();
+              }}
+              target="_blank"
+              className="aqua-button aqua-download-button"
+              data-aqua-modal
+            >
+              Download AQUA
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Desktop Header */}
       <header id="aqua-desktop-header" className={isScrolled ? "scrolled" : ""}>
         <div className="aqua-header-container">
-          <a className="aqua-header-logo-link" href="https://aquawallet.io/">
+          <a className="aqua-header-logo-link" href="/">
             <Image
               src="/assets/images/logos/aqua-logo.svg"
               className="aqua-logo"
@@ -86,16 +119,16 @@ export default function Header() {
             <div className="aqua-navigation">
               <ul className="nav">
                 <li className="nav-home nav-current">
-                  <a href="https://aquawallet.io/">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li className="nav-features">
-                  <a href="https://aquawallet.io/features">Features</a>
+                  <a href="/features">Features</a>
                 </li>
                 <li className="nav-contact-us">
-                  <a href="https://aquawallet.io/contact-us">Contact Us</a>
+                  <a href="https://jan3.zendesk.com/hc/en-us">Contact Us</a>
                 </li>
                 <li className="nav-faq">
-                  <a href="https://aquawallet.io/#faq">FAQ</a>
+                  <a href="/#faq">FAQ</a>
                 </li>
               </ul>
             </div>

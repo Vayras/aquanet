@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: "Inter", "DM Sans", "Open sans";
+  font-family: "DM Sans", "Inter", "Open sans";
   font-size: var(--body-1-font-size);
   line-height: var(--body-1-line-height);
   letter-spacing: var(--body-1-letter-spacing);

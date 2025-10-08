@@ -1,18 +1,32 @@
+"use client"
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function SectionCenteredTwo() {
   return (
-    <section className="section-centered primary-inverse with-video-bg" data-animate-slide-up-on-intersect-frame>
+    <section className="section-centered primary-inverse with-video-bg">
       <div className="section-content">
-        <div className="section-text" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-text"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h3 className="section-title">
             PRIVATE AND CHEAP USDT TRANSFERS
           </h3>
           <p className="text-subtitle font-semi-bold">
             Sending digital dollars around the world is now cheaper than ever thanks to Tether USDt and the Liquid Network. Don't pay more fees than you need to!
           </p>
-        </div>
-        <div className="section-media" data-animate-slide-up-on-intersect>
+        </motion.div>
+        <motion.div
+          className="section-media"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <div className="fee-comparison-cards">
             <article className="fee-comparison-card best-fee">
               <Image className="fee-comparison-logo" src="/assets/images/logos/liquid.svg" alt="Liquid logo" width={100} height={100} />
@@ -90,7 +104,7 @@ export default function SectionCenteredTwo() {
               </article>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="section-background-container">
         <video autoPlay muted loop className="section-background-media">

@@ -6,7 +6,6 @@ import Footer from "@/components/footer";
 
 // Base styles
 import "./styles/bare.css";
-// import "./styles/bootstrap.min.css";
 import "./styles/design-system.css";
 
 // Typography and fonts
@@ -32,8 +31,8 @@ import "./styles/styles.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aquanet",
-  description: "Next.js application",
+  title: "AQUA Wallet",
+  description: "AQUA wallet website",
 };
 
 export default function RootLayout({
@@ -43,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Header />
         {children}
         <Footer />

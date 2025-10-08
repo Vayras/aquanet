@@ -1,10 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function SectionLiquidNetwork() {
   return (
-    <section className="section-centered" data-animate-slide-up-on-intersect-frame>
+    <section className="section-centered">
       <div className="section-content">
-        <div className="section-text" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-text"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h3 className="section-title">
             THE LIQUID NETWORK
           </h3>
@@ -13,9 +22,15 @@ export default function SectionLiquidNetwork() {
             and the possibility to issue digital assets such as stablecoins or financial instruments without the need for a
             native token.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="section-media" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-media"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <Image
             className="main-image"
             src="/assets/images/liquid-network-map.png"
@@ -23,7 +38,7 @@ export default function SectionLiquidNetwork() {
             width={1200}
             height={600}
           />
-        </div>
+        </motion.div>
       </div>
       <div className="section-background-container"></div>
     </section>

@@ -1,8 +1,18 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function SectionPoweringTransfers() {
   return (
-    <section className="section-centered section-white" data-animate-slide-up-on-intersect-frame>
+    <section className="section-centered section-white">
       <div className="section-content">
-        <div className="section-text" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-text"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h3 className="section-title">
             POWERING INSTANT GLOBAL TRANSFERS
           </h3>
@@ -10,9 +20,15 @@ export default function SectionPoweringTransfers() {
             Whether you're paying an invoice or transferring funds across networks, AQUA makes it easy. Send USDt and
             Bitcoin quickly, securely, and without high transaction fees no matter where you are.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="section-media" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-media"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <div className="aqua-cards three-cards">
             <article className="aqua-card">
               <div className="aqua-card-icon dynamic-fill">
@@ -65,7 +81,7 @@ export default function SectionPoweringTransfers() {
               </p>
             </article>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

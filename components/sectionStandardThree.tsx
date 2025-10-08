@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function SectionStandardThree() {
   const handleAquaDownloadModal = () => {
@@ -10,9 +11,15 @@ export default function SectionStandardThree() {
   };
 
   return (
-    <section className="section-standard image-first" data-animate-slide-up-on-intersect-frame>
+    <section className="section-standard image-first">
       <div className="section-content">
-        <div className="section-text" data-animate-slide-up-on-intersect>
+        <motion.div
+          className="section-text"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <h3 className="section-title">
             FINANCIAL FREEDOM
           </h3>
@@ -31,8 +38,14 @@ export default function SectionStandardThree() {
           >
             Get The App →
           </a>
-        </div>
-        <div className="section-media" data-animate-slide-up-on-intersect>
+        </motion.div>
+        <motion.div
+          className="section-media"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <Image
             className="main-image limited-width-phone-image"
             src="/assets/images/aqua-app-swap-screen.png"
@@ -40,7 +53,7 @@ export default function SectionStandardThree() {
             width={500}
             height={900}
           />
-        </div>
+        </motion.div>
         <div className="section-background-container"></div>
       </div>
     </section>
