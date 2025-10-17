@@ -1,8 +1,16 @@
-/* DM Sans */
+/* Inter Variable Font */
 @font-face {
-  font-family: "DM Sans";
-  src: url("/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
-  font-weight: 400 500 600 700 800;
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter/InterVariable.ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter/InterVariable-Italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
   font-display: swap;
 }

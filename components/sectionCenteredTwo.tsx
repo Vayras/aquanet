@@ -29,7 +29,7 @@ export default function SectionCenteredTwo() {
         >
           <div className="fee-comparison-cards">
             <article className="fee-comparison-card best-fee">
-              <Image className="fee-comparison-logo" src="/assets/images/logos/liquid.svg" alt="Liquid logo" width={100} height={100} />
+              <Image className="fee-comparison-logo" src="/assets/images/logos/liquid.svg" alt="Liquid logo" width={48} height={48} />
               <div className="fee-comparison-info">
                 <p>
                   Liquid
@@ -50,8 +50,7 @@ export default function SectionCenteredTwo() {
                   className="fee-comparison-logo"
                   src="/assets/images/logos/western-union.svg"
                   alt="Western Union logo"
-                  width={100}
-                  height={100}
+width={48} height={48}
                 />
                 <div className="fee-comparison-info">
                   <p>
@@ -68,7 +67,7 @@ export default function SectionCenteredTwo() {
                 </div>
               </article>
               <article className="fee-comparison-card">
-                <Image className="fee-comparison-logo" src="/assets/images/logos/ethereum.svg" alt="Ethereum logo" width={100} height={100} />
+                <Image className="fee-comparison-logo" src="/assets/images/logos/ethereum.svg" alt="Ethereum logo" width={48} height={48} />
                 <div className="fee-comparison-info">
                   <p>
                     Ethereum
@@ -87,7 +86,7 @@ export default function SectionCenteredTwo() {
 
             <div className="last-fee-comparison-card">
               <article className="fee-comparison-card">
-                <Image className="fee-comparison-logo" src="/assets/images/logos/tron.svg" alt="Tron logo" width={100} height={100} />
+                <Image className="fee-comparison-logo" src="/assets/images/logos/tron.svg" alt="Tron logo" width={48} height={48} />
                 <div className="fee-comparison-info">
                   <p>
                     Tron

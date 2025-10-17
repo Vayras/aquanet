@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: "DM Sans", "Inter", "Open sans";
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: var(--body-1-font-size);
   line-height: var(--body-1-line-height);
   letter-spacing: var(--body-1-letter-spacing);
@@ -35,7 +35,7 @@ h1,
     5.125rem
   ); /* Min value (48px) ends at 640 px. Max value (82px) starts at 1320 px. */
   line-height: 5.125rem;
-  letter-spacing: 0;
+  letter-spacing: 0.01em;
   margin-bottom: 1.5rem; /* 24px */
 }
 
@@ -71,7 +71,7 @@ h4,
     1.875rem
   ); /* Min value (24px) ends at 600 px. Max value (30px) starts at 1050 px. */
   line-height: 2.625rem; /* fixed 140% of max font size */
-  letter-spacing: 0;
+  letter-spacing: 0.01em;
   margin-bottom: 1.5rem; /* 24px */
 }
 
@@ -79,7 +79,7 @@ h5,
 .text-h5 {
   font-size: 1.5rem; /* 24px */
   line-height: 2.1rem; /* Fixed at 140% of 1.5rem */
-  letter-spacing: 0;
+  letter-spacing: 0.01em;
   margin-bottom: 1.5rem; /* 24px */
 }
 

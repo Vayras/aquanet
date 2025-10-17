@@ -1,35 +1,42 @@
 "use client"
+import { useState } from "react";
 import Image from "next/image";
-
+import DownloadModal from "./downloadModal";
 
 export default function SectionStandard() {
-    const handleAquaDownloadModal = () => {
-    // Add your download modal logic here
-    console.log("Open download modal");
-    return false;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
   };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <section className="section-standard aqua-hero primary-inverse with-video-bg">
-      <div className="section-content">
-        <div className="section-text">
-          <h3 className="section-title">
-            THE BITCOIN SUPERAPP
-          </h3>
-          <p className="text-subtitle font-semi-bold">
-            AQUA is your global passport to financial inclusion, designed for Latin America and embraced by Bitcoiners everywhere.
-          </p>
-         <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              return handleAquaDownloadModal();
-            }}
-            target="_blank"
-            className="aqua-button aqua-download-button"
-            data-aqua-modal
-          >
-            Get The App →
-          </a>
+    <>
+      <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <section className="section-standard aqua-hero primary-inverse with-video-bg">
+        <div className="section-content">
+          <div className="section-text">
+            <h3 className="section-title">
+              THE BITCOIN SUPERAPP
+            </h3>
+            <p className="text-subtitle font-semi-bold">
+              AQUA is your global passport to financial inclusion, designed for Latin America and embraced by Bitcoiners everywhere.
+            </p>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleOpenModal();
+              }}
+              className="aqua-button aqua-download-button"
+              data-aqua-modal
+            >
+              Get The App →
+            </a>
         </div>
         <div className="section-media">
           <Image
@@ -47,5 +54,6 @@ export default function SectionStandard() {
         </video>
       </div>
     </section>
+    </>
   );
 }

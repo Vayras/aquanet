@@ -2,14 +2,24 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import DownloadModal from "./downloadModal";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleAquaDownloadModal = () => {
-    console.log("Open download modal");
-    return false;
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleMobileDownloadClick = () => {
+    setMobileMenuOpen(false);
+    setIsModalOpen(true);
   };
 
   const toggleMobileMenu = () => {
@@ -37,6 +47,7 @@ export default function Header() {
 
   return (
     <>
+      <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
       {/* Mobile Header */}
       <header id="aqua-mobile-header" className={`${isScrolled && !mobileMenuOpen ? "scrolled" : ""} ${mobileMenuOpen ? "mobile-menu-active" : ""}`}>
         <div className="aqua-header-container">
@@ -91,9 +102,8 @@ export default function Header() {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                return handleAquaDownloadModal();
+                handleMobileDownloadClick();
               }}
-              target="_blank"
               className="aqua-button aqua-download-button"
               data-aqua-modal
             >
@@ -139,9 +149,8 @@ export default function Header() {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  return handleAquaDownloadModal();
+                  handleOpenModal();
                 }}
-                target="_blank"
                 className="aqua-button aqua-download-button"
                 data-aqua-modal
               >
