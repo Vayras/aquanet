@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -50,6 +51,11 @@ export default function RootLayout({
           {children}
           <Footer />
         </I18nProvider>
+        <Script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=b9f7ee6f-b831-4fe6-b298-a3e0d229f2bd"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
