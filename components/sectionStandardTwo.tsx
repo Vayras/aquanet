@@ -5,8 +5,18 @@ import { motion } from "framer-motion";
 
 export default function SectionStandardTwo() {
   const scrollToNewsletterAndFocus = () => {
-    // Add your newsletter scroll logic here
-    console.log("Scroll to newsletter");
+    const newsletterForm = document.getElementById("jan3-newsletter-form");
+    if (newsletterForm) {
+      newsletterForm.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      // Focus on the email input after scrolling
+      setTimeout(() => {
+        const emailInput = newsletterForm.querySelector('input[type="email"]') as HTMLInputElement;
+        if (emailInput) {
+          emailInput.focus();
+        }
+      }, 800);
+    }
   };
 
   return (
@@ -25,7 +35,7 @@ export default function SectionStandardTwo() {
           <p className="text-subtitle font-semi-bold">
             AQUA's built-in Marketplace allows you to buy Bitcoin directly into self custody in many regions.  Prepaid Visa Dolphin Cards are on their way as well as peer-to-peer financial services like lending, borrowing, and bill-pay.  Everything you need in one app!
           </p>
-          <button onClick={scrollToNewsletterAndFocus}>
+          <button onClick={scrollToNewsletterAndFocus} className="aqua-button aqua-download-button">
             Get Notified!
           </button>
         </motion.div>
