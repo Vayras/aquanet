@@ -1,0 +1,21 @@
+{
+  "header": {
+    "home": "Inicio",
+    "features": "Características",
+    "contactUs": "Contáctenos",
+    "faq": "Preguntas frecuentes",
+    "downloadAqua": "Descargar AQUA"
+  },
+  "hero": {
+    "title": "Cartera AQUA",
+    "subtitle": "Tu cartera segura de Bitcoin y Liquid"
+  },
+  "footer": {
+    "allRightsReserved": "Todos los derechos reservados"
+  },
+  "common": {
+    "learnMore": "Aprende más",
+    "getStarted": "Comenzar",
+    "close": "Cerrar"
+  }
+}

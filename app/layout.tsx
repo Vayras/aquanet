@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import I18nProvider from "@/components/I18nProvider";
 
 // Base styles
 import "./styles/bare.css";
@@ -22,6 +23,7 @@ import "./styles/components/cards.css";
 import "./styles/components/header.css";
 import "./styles/components/footer.css";
 import "./styles/components/modals.css";
+import "./styles/components/language-chooser.css";
 
 // Additional styles
 import "./styles/download.css";
@@ -43,9 +45,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <I18nProvider>
+          <Header />
+          {children}
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

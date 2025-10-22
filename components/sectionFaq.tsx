@@ -85,15 +85,15 @@ export default function SectionFaq() {
                   src="/assets/images/icons/up_chevron.svg"
                   alt="selector arrow up"
                   className="aqua-faq-selector selector-up"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={12}
                 />
                 <Image
                   src="/assets/images/icons/down_chevron.svg"
                   alt="selector arrow down"
                   className="aqua-faq-selector selector-down"
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={12}
                 />
               </div>
               <div className="aqua-faq-answer">

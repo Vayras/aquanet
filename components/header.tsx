@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import DownloadModal from "./downloadModal";
+import LanguageChooser from "./LanguageChooser";
 
 export default function Header() {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -89,15 +92,16 @@ export default function Header() {
             <div className="aqua-navigation">
              <ul className="nav">
 
-        <li className="nav-home nav-current"><a href="/" data-translate-key="Home">Home</a></li>
-        <li className="nav-features"><a href="/features" data-translate-key="Features">Features</a></li>
-        <li className="nav-contact-us"><a href="https://jan3.zendesk.com/hc/en-us" data-translate-key="Contact Us">Contact Us</a></li>
-        <li className="nav-faq"><a href="/#faq" data-translate-key="FAQ">FAQ</a></li>
+        <li className="nav-home nav-current"><a href="/">{t('header.home')}</a></li>
+        <li className="nav-features"><a href="/features">{t('header.features')}</a></li>
+        <li className="nav-contact-us"><a href="https://jan3.zendesk.com/hc/en-us">{t('header.contactUs')}</a></li>
+        <li className="nav-faq"><a href="/#faq">{t('header.faq')}</a></li>
 
     </ul>
             </div>
           </div>
           <div className="aqua-header-button">
+            <LanguageChooser />
             <a
               href="#"
               onClick={(e) => {
@@ -107,7 +111,7 @@ export default function Header() {
               className="aqua-button aqua-download-button"
               data-aqua-modal
             >
-              Download AQUA
+              {t('header.downloadAqua')}
             </a>
           </div>
         </div>
@@ -129,21 +133,22 @@ export default function Header() {
             <div className="aqua-navigation">
               <ul className="nav">
                 <li className="nav-home nav-current">
-                  <a href="/">Home</a>
+                  <a href="/">{t('header.home')}</a>
                 </li>
                 <li className="nav-features">
-                  <a href="/features">Features</a>
+                  <a href="/features">{t('header.features')}</a>
                 </li>
                 <li className="nav-contact-us">
-                  <a href="https://jan3.zendesk.com/hc/en-us">Contact Us</a>
+                  <a href="https://jan3.zendesk.com/hc/en-us">{t('header.contactUs')}</a>
                 </li>
                 <li className="nav-faq">
-                  <a href="/#faq">FAQ</a>
+                  <a href="/#faq">{t('header.faq')}</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="aqua-header-controls">
+            <LanguageChooser />
             <div className="aqua-header-button">
               <a
                 href="#"
@@ -154,7 +159,7 @@ export default function Header() {
                 className="aqua-button aqua-download-button"
                 data-aqua-modal
               >
-                Download AQUA
+                {t('header.downloadAqua')}
               </a>
             </div>
           </div>

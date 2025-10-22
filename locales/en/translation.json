@@ -1,0 +1,21 @@
+{
+  "header": {
+    "home": "Home",
+    "features": "Features",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "downloadAqua": "Download AQUA"
+  },
+  "hero": {
+    "title": "AQUA Wallet",
+    "subtitle": "Your secure Bitcoin and Liquid wallet"
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "close": "Close"
+  }
+}
