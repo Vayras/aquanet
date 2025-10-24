@@ -34,6 +34,7 @@ import "./styles/styles.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://3.17.74.134/'),
   title: "AQUA Wallet",
   description: "AQUA wallet website",
   openGraph: {
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
       {
         url: "/assets/images/aqua-social-card-2.jpg",
         width: 1200,
+        
         height: 630,
         alt: "AQUA Wallet",
       },
