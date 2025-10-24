@@ -36,6 +36,25 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "AQUA Wallet",
   description: "AQUA wallet website",
+  openGraph: {
+    title: "AQUA Wallet",
+    description: "AQUA wallet website",
+    images: [
+      {
+        url: "/assets/images/aqua-social-card-2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AQUA Wallet",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AQUA Wallet",
+    description: "AQUA wallet website",
+    images: ["/assets/images/aqua-social-card-2.jpg"],
+  },
 };
 
 export default function RootLayout({
