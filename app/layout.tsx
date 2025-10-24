@@ -34,29 +34,36 @@ import "./styles/styles.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://3.17.74.134/'),
-  title: "AQUA Wallet",
-  description: "AQUA wallet website",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "http://3.17.74.134"),
+  title: "AQUA Wallet – Bitcoin Made Simple",
+  description:
+    "AQUA Wallet is a self-custodial Bitcoin and Liquid wallet designed for fast, private, and easy transactions. Manage BTC, USDt, and assets seamlessly with full control over your funds.",
   openGraph: {
-    title: "AQUA Wallet",
-    description: "AQUA wallet website",
+    title: "AQUA Wallet – Bitcoin Made Simple",
+    description:
+      "AQUA Wallet is a fast, private, and self-custodial Bitcoin and Liquid wallet. Send, receive, and manage BTC and assets securely with ease.",
+    url: "http://3.17.74.134/",
+    siteName: "AQUA Wallet",
     images: [
       {
-        url: "/assets/images/aqua-social-card-2.jpg",
-        width: 1920,
-        height: 1080,
-        alt: "AQUA Wallet",
+        url: "http://3.17.74.134/assets/images/aqua-social-card-2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AQUA Wallet Social Card",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AQUA Wallet",
-    description: "AQUA wallet website",
-    images: ["/assets/images/aqua-social-card-2.jpg"],
+    title: "AQUA Wallet – Bitcoin Made Simple",
+    description:
+      "A self-custodial Bitcoin & Liquid wallet for secure, seamless transactions. Full control. No compromises.",
+    images: ["http://3.17.74.134/assets/images/aqua-social-card-2.jpg"],
+    creator: "@aquawallet",
   },
 };
+
 
 export default function RootLayout({
   children,
