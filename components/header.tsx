@@ -59,7 +59,7 @@ export default function Header() {
               src="/assets/images/logos/aqua-logo.svg"
               className="aqua-logo mobile-modal-off"
               alt="AQUA"
-              width={120}
+              width={129}
               height={40}
             />
             <Image
@@ -125,7 +125,7 @@ export default function Header() {
               src="/assets/images/logos/aqua-logo.svg"
               className="aqua-logo"
               alt="AQUA"
-              width={120}
+              width={129}
               height={40}
             />
           </a>
