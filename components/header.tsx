@@ -2,15 +2,19 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import DownloadModal from "./downloadModal";
 import LanguageChooser from "./LanguageChooser";
 
 export default function Header() {
   const { t } = useTranslation();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentHash, setCurrentHash] = useState("");
+  const [isFaqInView, setIsFaqInView] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -45,6 +49,45 @@ export default function Header() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    // Set initial hash
+    setCurrentHash(window.location.hash);
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Observe FAQ section to determine if it's in view
+    const faqSection = document.getElementById("faq");
+
+    if (!faqSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsFaqInView(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.3, // Consider in view when 30% visible
+      }
+    );
+
+    observer.observe(faqSection);
+
+    return () => {
+      observer.disconnect();
     };
   }, []);
 
@@ -92,16 +135,15 @@ export default function Header() {
             <div className="aqua-navigation">
              <ul className="nav">
 
-        <li className="nav-home nav-current"><a href="/">{t('header.home')}</a></li>
-        <li className="nav-features"><a href="/features">{t('header.features')}</a></li>
-        <li className="nav-contact-us"><a href="https://jan3.zendesk.com/hc/en-us">{t('header.contactUs')}</a></li>
-        <li className="nav-faq"><a href="/#faq">{t('header.faq')}</a></li>
+        <li className={`nav-home ${pathname === '/' && !isFaqInView ? 'nav-current' : ''}`}><a href="/">{t('home')}</a></li>
+        <li className={`nav-features ${pathname === '/features' ? 'nav-current' : ''}`}><a href="/features">{t('features')}</a></li>
+        <li className="nav-contact-us"><a href="https://jan3.zendesk.com/hc/en-us">{t('contact us')}</a></li>
+        <li className={`nav-faq ${pathname === '/' && isFaqInView ? 'nav-current' : ''}`}><a href="/#faq">{t('faq')}</a></li>
 
     </ul>
             </div>
           </div>
           <div className="aqua-header-button">
-            <LanguageChooser />
             <a
               href="#"
               onClick={(e) => {
@@ -111,7 +153,7 @@ export default function Header() {
               className="aqua-button aqua-download-button"
               data-aqua-modal
             >
-              {t('header.downloadAqua')}
+              {t('header_download_aqua')}
             </a>
           </div>
         </div>
@@ -132,17 +174,17 @@ export default function Header() {
           <div className="aqua-header-nav">
             <div className="aqua-navigation">
               <ul className="nav">
-                <li className="nav-home nav-current">
-                  <a href="/">{t('header.home')}</a>
+                <li className={`nav-home ${pathname === '/' && !isFaqInView ? 'nav-current' : ''}`}>
+                  <a href="/">{t('home')}</a>
                 </li>
-                <li className="nav-features">
-                  <a href="/features">{t('header.features')}</a>
+                <li className={`nav-features ${pathname === '/features' ? 'nav-current' : ''}`}>
+                  <a href="/features">{t('features')}</a>
                 </li>
                 <li className="nav-contact-us">
-                  <a href="https://jan3.zendesk.com/hc/en-us">{t('header.contactUs')}</a>
+                  <a href="https://jan3.zendesk.com/hc/en-us">{t('contact us')}</a>
                 </li>
-                <li className="nav-faq">
-                  <a href="/#faq">{t('header.faq')}</a>
+                <li className={`nav-faq ${pathname === '/' && isFaqInView ? 'nav-current' : ''}`}>
+                  <a href="/#faq">{t('faq')}</a>
                 </li>
               </ul>
             </div>
@@ -159,7 +201,7 @@ export default function Header() {
                 className="aqua-button aqua-download-button"
                 data-aqua-modal
               >
-                {t('header.downloadAqua')}
+                {t('header_download_aqua')}
               </a>
             </div>
           </div>

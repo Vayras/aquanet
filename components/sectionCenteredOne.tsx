@@ -1,7 +1,10 @@
 "use client"
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function SectionCenteredOne() {
+  const { t } = useTranslation();
+
   return (
     <section className="section-centered">
       <div className="section-content">
@@ -13,10 +16,10 @@ export default function SectionCenteredOne() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="section-title">
-            ALL IN ONE BITCOIN WALLET
+            {t('section_title_bitcoin_wallet_overview')}
           </h3>
           <p className="text-subtitle font-semi-bold">
-            Save in Bitcoin and transact efficiently with Lightning, Liquid, and Tether USDt. Easily swap assets, buy Bitcoin, and much, much more!
+            {t('section_subtitle_bitcoin_wallet_features')}
           </p>
         </motion.div>
 
@@ -37,10 +40,10 @@ export default function SectionCenteredOne() {
                 </svg>
               </div>
               <h5>
-                Banking Made Simple for Everyone
+                {t('feature_card_banking_simple_title')}
               </h5>
               <p>
-                Access diverse financial products, from simple spending and saving in Bitcoin, to advanced options like Prepaid Visa Dolphin Card and lending soon!
+                {t('feature_card_banking_simple_description')}
               </p>
             </article>
             <article className="aqua-card">
@@ -52,10 +55,10 @@ export default function SectionCenteredOne() {
                 </svg>
               </div>
               <h5>
-                Freedom to Send, Spend, and Swap
+                {t('feature_card_send_spend_swap_title')}
               </h5>
               <p>
-                AQUA makes everyday transactions easy, giving you the power to move money seamlessly and confidentially with low fees and full control.
+                {t('feature_card_send_spend_swap_description')}
               </p>
             </article>
             <article className="aqua-card">
@@ -67,10 +70,10 @@ export default function SectionCenteredOne() {
                 </svg>
               </div>
               <h5>
-                Complete Control of Your Money
+                {t('feature_card_control_money_title')}
               </h5>
               <p>
-                AQUA enables self custody of your keys and assets, ensuring your money is secure and accessible from anywhere, while protecting your privacy.
+                {t('feature_card_control_money_description')}
               </p>
             </article>
           </div>

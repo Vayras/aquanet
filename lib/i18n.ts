@@ -9,30 +9,33 @@ const resources = {
   en: {
     translation: en
   },
-  'es-ES': {
-    translation: es
-  },
-  'es': {
+  es: {
     translation: es
   }
 };
 
-i18n
-  .use(LanguageDetector) // Detect user language
-  .use(initReactI18next) // Pass i18n instance to react-i18next
-  .init({
-    resources,
-    fallbackLng: 'en',
-    debug: true, // Enable debug mode to see i18n issues
-    interpolation: {
-      escapeValue: false // React already escapes values
-    },
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage']
-    },
-    supportedLngs: ['en', 'es', 'es-ES'],
-    load: 'languageOnly' // This will load 'es' for 'es-ES', 'es-MX', etc.
-  });
+// Only initialize if not already initialized
+if (!i18n.isInitialized) {
+  i18n
+    .use(LanguageDetector) // Detect user language
+    .use(initReactI18next) // Pass i18n instance to react-i18next
+    .init({
+      resources,
+      fallbackLng: 'en',
+      lng: 'en', // Default language
+      debug: true, // Enable debug mode to see i18n issues
+      interpolation: {
+        escapeValue: false // React already escapes values
+      },
+      detection: {
+        order: ['localStorage', 'navigator'],
+        caches: ['localStorage']
+      },
+      supportedLngs: ['en', 'es'],
+      react: {
+        useSuspense: false // Disable suspense for App Router compatibility
+      }
+    });
+}
 
 export default i18n;

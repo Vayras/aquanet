@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "http://3.17.74.134/assets/images/aqua-social-card-2.jpg",
-        width: 1200,
-        height: 630,
+        width: 1920,
+        height: 1080,
         alt: "AQUA Wallet Social Card",
       },
     ],

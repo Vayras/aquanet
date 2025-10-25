@@ -91,6 +91,17 @@
   font-size: 0.75rem; /* 12px */
 }
 
+.footer-language-chooser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show language chooser in footer only on mobile/tablet */
+.footer-language-chooser {
+  display: flex;
+}
+
 @media (min-width: 768px) {
   .newsletter-signup {
     flex-direction: row;
@@ -201,5 +212,13 @@
 @media (min-width: 1024px) {
   .section-footer .footer-description {
     max-width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Hide footer language chooser on desktop (1280px+) */
+  .footer-language-chooser,
+  .footer-language-chooser-tablet {
+    display: none !important;
   }
 }

@@ -264,6 +264,41 @@
   color: #008f85;
 }
 
+/* Extra small screens */
+@media (max-width: 400px) {
+  .middle-fee-comparison-cards,
+  .last-fee-comparison-card {
+    padding: 0 0.5rem; /* Reduce padding on very small screens */
+  }
+
+  .fee-comparison-card {
+    font-size: 0.75rem; /* 12px - Reduce font size to prevent wrapping */
+    gap: 0.75rem; /* 12px - Reduce gap slightly */
+  }
+
+  .fee-comparison-card.best-fee {
+    font-size: 0.8125rem; /* 13px - Slightly larger for best fee card */
+  }
+
+  .fee-comparison-logo {
+    height: 2.5rem; /* 40px - Reduce logo size */
+  }
+
+  .fee-comparison-info {
+    gap: 0.25rem; /* Reduce gap between text items */
+  }
+
+  .fee-comparison-amount p {
+    padding: 0.25rem 0.5rem; /* Reduce padding on fee badge */
+    font-size: 0.6875rem; /* 11px */
+  }
+
+  .best-fee .fee-comparison-amount p {
+    padding: 0.28125rem 0.5rem;
+    font-size: 0.75rem; /* 12px */
+  }
+}
+
 .aqua-cards.stairs {
   width: 100%;
 }

@@ -52,6 +52,7 @@ header.scrolled {
 .aqua-header-localization {
   position: relative;
   line-height: 22px;
+  z-index: 9999;
 }
 
 .aqua-header-globe {
@@ -74,7 +75,7 @@ header.scrolled {
   color: var(--palatinate-blue-750);
   border-radius: 0.5rem; /* 8px */
   padding: 0;
-  z-index: 1200;
+  z-index: 9999;
 }
 
 .aqua-header-localization-menu.on {

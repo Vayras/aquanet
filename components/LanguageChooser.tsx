@@ -22,8 +22,14 @@ export default function LanguageChooser() {
     setIsOpen(!isOpen);
   };
 
-  const handleLanguageSelect = (langCode: string) => {
-    i18n.changeLanguage(langCode);
+  const handleLanguageSelect = async (langCode: string) => {
+    console.log('Changing language to:', langCode);
+    try {
+      await i18n.changeLanguage(langCode);
+      console.log('Language changed successfully to:', i18n.language);
+    } catch (error) {
+      console.error('Error changing language:', error);
+    }
     setIsOpen(false);
   };
 

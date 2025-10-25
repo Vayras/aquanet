@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import LanguageChooser from "./LanguageChooser";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -85,6 +86,11 @@ export default function Footer() {
           </small>
 
           <div className="footer-links mobile-footer-links">
+            <div className="footer-link-group">
+              <div className="footer-language-chooser">
+                <LanguageChooser />
+              </div>
+            </div>
             <div className="footer-link-group">
               <div className="aqua-navigation">
                 <ul className="nav">
@@ -224,6 +230,9 @@ export default function Footer() {
 
           <div className="footer-links desktop-footer-links">
             <div className="footer-row">
+              <div className="footer-link-group footer-language-chooser-tablet">
+                <LanguageChooser />
+              </div>
               <div className="footer-link-group">
                 <div className="aqua-navigation">
                   <ul className="nav">

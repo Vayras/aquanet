@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function SectionStandardThree() {
+  const { t } = useTranslation();
+
   const handleAquaDownloadModal = () => {
     // Add your download modal logic here
     console.log("Open download modal");
@@ -21,10 +24,10 @@ export default function SectionStandardThree() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="section-title">
-            FINANCIAL FREEDOM
+            {t('section_title_financial_freedom')}
           </h3>
           <p className="text-subtitle font-semi-bold">
-            The first Bitcoin and Liquid wallet with built-in USDt support. Spend cash, save in BTC, protect your privacy, beat inflation, and secure your future, all on a Bitcoin standard. AQUA makes freedom simple.
+            {t('section_subtitle_financial_freedom')}
           </p>
           <a
             href="#"
@@ -36,7 +39,7 @@ export default function SectionStandardThree() {
             className="aqua-button aqua-download-button"
             data-aqua-modal
           >
-            Get The App →
+            {t('button_get_the_app')}
           </a>
         </motion.div>
         <motion.div
@@ -48,7 +51,7 @@ export default function SectionStandardThree() {
         >
           <Image
             className="main-image limited-width-phone-image"
-            src="/assets/images/aqua-app-swap-screen.png"
+            src="/assets/images/aqua-financial-freedom.png"
             alt="Mobile device showing the AQUA app swap screen"
             width={500}
             height={900}

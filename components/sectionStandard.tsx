@@ -1,9 +1,11 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import DownloadModal from "./downloadModal";
 
 export default function SectionStandard() {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -21,10 +23,10 @@ export default function SectionStandard() {
         <div className="section-content">
           <div className="section-text">
             <h3 className="section-title">
-              THE BITCOIN SUPERAPP
+              {t('section_title_the_bitcoin_superapp')}
             </h3>
             <p className="text-subtitle font-semi-bold">
-              AQUA is your global passport to financial inclusion, designed for Latin America and embraced by Bitcoiners everywhere.
+              {t('text_subtitle_aqua_global_passport')}
             </p>
             <a
               href="#"
@@ -35,7 +37,7 @@ export default function SectionStandard() {
               className="aqua-button aqua-download-button"
               data-aqua-modal
             >
-              Get The App →
+              {t('link_get_the_app')} →
             </a>
         </div>
         <div className="section-media">
