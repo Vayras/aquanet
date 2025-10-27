@@ -75,7 +75,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               rel="noopener noreferrer"
             >
               <Image
-                src="/assets/images/buttons/google-play-button.png"
+                src="/assets/images/buttons/playStore.png"
                 alt="Google Play button"
                 width={200}
                 height={60}
@@ -106,7 +106,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                 src="/assets/images/buttons/aqua-apk-button.png"
                 alt="APK button"
                 width={200}
-                height={60}
+                height={59}
               />
             </a>
           </span>
