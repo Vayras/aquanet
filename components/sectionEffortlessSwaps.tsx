@@ -1,43 +1,51 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import DownloadModal from "./downloadModal";
 
 export default function SectionEffortlessSwaps() {
-  const handleAquaDownloadModal = () => {
-    console.log("Open download modal");
-    return false;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
-    <section className="section-standard aqua-hero primary-inverse with-video-bg">
-      <div className="section-content">
-        <motion.div
-          className="section-text"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h3 className="section-title">
-            EFFORTLESS SWAPS
-          </h3>
-          <p className="text-subtitle font-semi-bold">
-            AQUA is the only Bitcoin wallet with easy on-the-fly swaps, allowing users to put Bitcoin on Layer 2 for quick
-            access to Lightning payments or stablecoins.
-          </p>
-            <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              return handleAquaDownloadModal();
-            }}
-            target="_blank"
-            className="aqua-button aqua-download-button"
-            data-aqua-modal
+    <>
+      <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <section className="section-standard aqua-hero primary-inverse with-video-bg">
+        <div className="section-content">
+          <motion.div
+            className="section-text"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Get The App →
-          </a>
-        </motion.div>
+            <h3 className="section-title">
+              EFFORTLESS SWAPS
+            </h3>
+            <p className="text-subtitle font-semi-bold">
+              AQUA is the only Bitcoin wallet with easy on-the-fly swaps, allowing users to put Bitcoin on Layer 2 for quick
+              access to Lightning payments or stablecoins.
+            </p>
+              <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleOpenModal();
+              }}
+              className="aqua-button aqua-download-button"
+              data-aqua-modal
+            >
+              Get The App →
+            </a>
+          </motion.div>
         <motion.div
           className="section-media"
           initial={{ opacity: 0, y: 30 }}
@@ -59,5 +67,6 @@ export default function SectionEffortlessSwaps() {
         </video>
       </div>
     </section>
+    </>
   );
 }
