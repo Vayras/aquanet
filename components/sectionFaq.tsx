@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function SectionFaq() {
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -12,42 +14,42 @@ export default function SectionFaq() {
 
   const faqs = [
     {
-      question: "Are there limits on the amount of funds I can send or receive with AQUA?",
-      answer: "AQUA is non-custodial, so there are no restrictions on the amount you can send or receive. The only exception is USDt transfers via Tron or Ethereum, which depend on SideShift's liquidity."
+      question: t('faq_are_there_limits'),
+      answer: t('faq_are_there_limits_answer')
     },
     {
-      question: "Are AQUA transactions RBF-enabled, and how can I adjust the fees if needed?",
-      answer: "Yes. AQUA supports Replace-by-Fee (RBF). If a transaction is stuck due to low fees, you can increase the fee using the RBF option in the app to speed up confirmation."
+      question: t('faq_are_tx_rbf'),
+      answer: t('faq_are_tx_rbf_answer')
     },
     {
-      question: "My Bitcoin purchase in AQUA was declined or is missing.",
-      answer: "Check Restrictions. Bitcoin purchases are handled by third-party providers, which may have country-specific restrictions or KYC requirements. If your payment went through but you didn't receive Bitcoin, contact the provider directly."
+      question: t('faq_my_btc_purchase'),
+      answer: t('faq_my_btc_purchase_answer')
     },
     {
-      question: "Does AQUA collect any data from its users?",
+      question: t('faq_does_collect_data'),
       answer: (
         <>
-          <p>AQUA doesn't collect personal data or transaction logs. Data might only be shared when using third-party services, such as customer support through Zendesk.</p>
-          <p>For more information about AQUA's commitment to privacy, always check out the most recent version of our Privacy Policy.</p>
+          <p>{t('faq_does_collect_data_answer_p1')}</p>
+          <p>{t('faq_does_collect_data_answer_p2')}</p>
         </>
       )
     },
     {
-      question: "How does AQUA store my seed phrase?",
+      question: t('faq_how_does_aqua_store_seed'),
       answer: (
         <>
-          <p>AQUA is a non-custodial Bitcoin and Liquid wallet, therefore it is the user's sole responsibility to safeguard access to the funds and the device on which they install AQUA.</p>
-          <p>AQUA doesn't store or access seed phrases. They are securely saved on your device using Keychain (iOS) or EncryptedSharedPreferences (Android). Users are fully responsible for safeguarding their recovery phrases.</p>
+          <p>{t('faq_how_does_aqua_store_seed_answer_p1')}</p>
+          <p>{t('faq_how_does_aqua_store_seed_answer_p2')}</p>
         </>
       )
     },
     {
-      question: "How do I contact AQUA?",
+      question: t('faq_how_do_i_contact'),
       answer: (
         <p>
-          Visit our{" "}
+          {t('faq_how_do_i_contact_visit_portal')}{" "}
           <a href="https://jan3.zendesk.com/hc/en-us" target="_blank" rel="noopener noreferrer">
-            Zendesk Support Portal
+            {t('faq_how_do_i_contact_zendesk_link')}
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +73,7 @@ export default function SectionFaq() {
     <section className="section-faq" id="faq" data-animate-slide-up-on-intersect-frame>
       <div className="section-content">
         <h2 className="section-title" data-animate-slide-up-on-intersect>
-          FAQ
+          {t('faq_title')}
         </h2>
 
         <div className="aqua-faqs" data-animate-slide-up-on-intersect>

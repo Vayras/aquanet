@@ -42,6 +42,7 @@ button.aqua-button-accent {
 }
 
 .aqua-button-with-icon .loading-icon {
+  display: inline-block;
   animation: spin 1s linear infinite;
 }
 

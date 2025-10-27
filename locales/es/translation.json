@@ -77,5 +77,13 @@
   "features_page_bitcoin_wallet_more_title": "La Billetera de Bitcoin Que Hace Más",
   "features_page_bitcoin_wallet_more_description": "AQUA es tu escape hacia servicios construidos en Bitcoin. Desde pagos hasta integraciones poderosas, AQUA te conecta con lo último en Bitcoin, todo en una aplicación.",
   "features_page_shape_marketplace_title": "Ayuda a Dar Forma al Marketplace de AQUA",
-  "features_page_shape_marketplace_description": "¿Quieres más funciones, casas de cambio, o servicios? Queremos escucharte. Envía tus sugerencias, siempre estamos buscando mejorar."
+  "features_page_shape_marketplace_description": "¿Quieres más funciones, casas de cambio, o servicios? Queremos escucharte. Envía tus sugerencias, siempre estamos buscando mejorar.",
+  "faq_title": "Preguntas Frecuentes",
+  "faq_does_collect_data": "¿AQUA recopila datos de sus usuarios?",
+  "faq_does_collect_data_answer_p1": "AQUA no recopila datos personales ni registros de transacciones. Los datos solo podrían compartirse al usar servicios de terceros, como el soporte al cliente a través de Zendesk.",
+  "faq_does_collect_data_answer_p2": "Para obtener más información sobre el compromiso de AQUA con la privacidad, siempre consulta la versión más reciente de nuestra Política de Privacidad.",
+  "faq_how_does_aqua_store_seed_answer_p1": "AQUA es una billetera no custodial de Bitcoin y Liquid, por lo tanto, es responsabilidad total del usuario salvaguardar el acceso a los fondos y el dispositivo en el que instalen AQUA.",
+  "faq_how_does_aqua_store_seed_answer_p2": "AQUA no almacena ni accede a las frases semilla. Se guardan de forma segura en tu dispositivo utilizando Keychain (iOS) o EncryptedSharedPreferences (Android). Los usuarios son totalmente responsables de salvaguardar sus frases de recuperación.",
+  "faq_how_do_i_contact_zendesk_link": "Portal de Soporte de Zendesk",
+  "faq_how_do_i_contact_visit_portal": "Visita nuestro"
 }

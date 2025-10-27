@@ -77,5 +77,13 @@
   "features_page_bitcoin_wallet_more_title": "The Bitcoin Wallet That Does More",
   "features_page_bitcoin_wallet_more_description": "AQUA is your gateway to Bitcoin-powered services. From payments to powerful integrations, AQUA connects you to the latest in Bitcoin, all in one app.",
   "features_page_shape_marketplace_title": "Help Shape AQUA's Marketplace",
-  "features_page_shape_marketplace_description": "Want more features, exchanges, or services? We want to hear from you. Send us your suggestions, we're always looking to improve."
+  "features_page_shape_marketplace_description": "Want more features, exchanges, or services? We want to hear from you. Send us your suggestions, we're always looking to improve.",
+  "faq_title": "FAQ",
+  "faq_does_collect_data": "Does AQUA collect any data from its users?",
+  "faq_does_collect_data_answer_p1": "AQUA doesn't collect personal data or transaction logs. Data might only be shared when using third-party services, such as customer support through Zendesk.",
+  "faq_does_collect_data_answer_p2": "For more information about AQUA's commitment to privacy, always check out the most recent version of our Privacy Policy.",
+  "faq_how_does_aqua_store_seed_answer_p1": "AQUA is a non-custodial Bitcoin and Liquid wallet, therefore it is the user's sole responsibility to safeguard access to the funds and the device on which they install AQUA.",
+  "faq_how_does_aqua_store_seed_answer_p2": "AQUA doesn't store or access seed phrases. They are securely saved on your device using Keychain (iOS) or EncryptedSharedPreferences (Android). Users are fully responsible for safeguarding their recovery phrases.",
+  "faq_how_do_i_contact_zendesk_link": "Zendesk Support Portal",
+  "faq_how_do_i_contact_visit_portal": "Visit our"
 }
