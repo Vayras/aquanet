@@ -15,8 +15,7 @@ export default function SectionEffortlessSwaps() {
         <motion.div
           className="section-text"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="section-title">
@@ -42,8 +41,7 @@ export default function SectionEffortlessSwaps() {
         <motion.div
           className="section-media"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Image

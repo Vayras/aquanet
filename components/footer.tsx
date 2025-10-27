@@ -93,7 +93,11 @@ export default function Footer() {
             </button>
           </form>
           <small className="required-recaptcha-notice">
-            {t('newsletter_disclaimer_recaptcha')}
+            This site is protected by reCAPTCHA and the Google{" "}
+            <a href="https://policies.google.com/privacy" style={{color: "#0D6EFD"}}>Privacy Policy</a>
+            {" "}and{" "}
+            <a href="https://policies.google.com/terms" style={{color: "#0D6EFD"}}>Terms of Service</a>
+            {" "}apply.
           </small>
 
           <div className="footer-links mobile-footer-links">

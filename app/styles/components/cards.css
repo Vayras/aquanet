@@ -60,6 +60,7 @@
 
 .aqua-card p {
   color: var(--aqua-card-primary-body);
+  font-weight: 400;
 }
 
 .aqua-card h5 {

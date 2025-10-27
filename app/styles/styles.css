@@ -64,6 +64,7 @@ input::placeholder {
 
 .aqua-faq-question h5 {
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .aqua-faq .selector-up,
