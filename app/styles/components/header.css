@@ -36,6 +36,17 @@ header.scrolled {
   gap: 1.5rem; /* 24px */
 }
 
+.aqua-header-mobile-controls {
+  gap: 1rem; /* 16px - tighter spacing for mobile */
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .aqua-header-mobile-controls {
+    gap: 1.25rem; /* 20px - slightly more space on tablet */
+  }
+}
+
 .aqua-header-globe path {
   fill: var(--palatinate-blue-750);
   transition: 250ms ease-in;
@@ -47,6 +58,11 @@ header.scrolled {
 
 #aqua-mobile-header.mobile-menu-active .aqua-header-globe path {
   fill: var(--solid-white);
+}
+
+/* Ensure mobile header language chooser appears above menu when open */
+#aqua-mobile-header .aqua-header-localization {
+  z-index: 1101; /* Higher than mobile menu (1100) and header (1100) */
 }
 
 .aqua-header-localization {
@@ -317,6 +333,11 @@ header.scrolled {
   }
 
   #aqua-header-mobile-menu {
+    display: none;
+  }
+
+  /* Hide mobile header language chooser in desktop view */
+  #aqua-mobile-header .aqua-header-localization {
     display: none;
   }
 }

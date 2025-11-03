@@ -142,9 +142,10 @@
   align-items: center;
 }
 
-/* Show language chooser in footer only on mobile/tablet */
-.footer-language-chooser {
-  display: flex;
+/* Hide language chooser in footer - now shown in navbar for all breakpoints */
+.footer-language-chooser,
+.footer-language-chooser-tablet {
+  display: none !important;
 }
 
 @media (min-width: 768px) {
@@ -276,9 +277,5 @@
 }
 
 @media (min-width: 1280px) {
-  /* Hide footer language chooser on desktop (1280px+) */
-  .footer-language-chooser,
-  .footer-language-chooser-tablet {
-    display: none !important;
-  }
+  /* Footer language choosers already hidden globally - no additional rules needed */
 }

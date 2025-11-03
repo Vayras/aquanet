@@ -59,71 +59,6 @@
   font-weight: 500;
 }
 
-/* Footer language chooser styles */
-.footer-language-chooser .aqua-header-globe path,
-.footer-language-chooser-tablet .aqua-header-globe path {
-  fill: var(--solid-white);
-}
-
-/* Show tablet language chooser in desktop footer (for tablet view) */
-.footer-language-chooser-tablet {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* Footer language chooser dropdown - dark theme */
-.footer-language-chooser .aqua-header-localization-menu,
-.footer-language-chooser-tablet .aqua-header-localization-menu {
-  background: var(--palatinate-blue-950);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  /* Fix positioning - center align instead of right align */
-  right: auto;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
-  bottom: calc(100% + 8px);
-  top: auto;
-  /* Force vertical column layout */
-  display: flex;
-  flex-direction: column;
-  /* Override footer-links ul gap */
-  gap: 0 !important;
-  z-index: 9999;
-}
-
-.footer-language-chooser .aqua-header-localization-menu.open,
-.footer-language-chooser-tablet .aqua-header-localization-menu.open {
-  transform: translateX(-50%) translateY(0);
-}
-
-.footer-language-chooser .aqua-header-localization-menu li,
-.footer-language-chooser-tablet .aqua-header-localization-menu li {
-  color: var(--solid-white);
-  display: block;
-  width: 100%;
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding: 8px 16px; /* Reduced from default 10px to make it more compact */
-}
-
-.footer-language-chooser .aqua-header-localization-menu li:hover,
-.footer-language-chooser-tablet .aqua-header-localization-menu li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-language-chooser .aqua-header-localization-menu li.active,
-.footer-language-chooser-tablet .aqua-header-localization-menu li.active {
-  background-color: rgba(0, 199, 249, 0.2);
-  color: var(--solid-white);
-  font-weight: 500;
-}
-
-.footer-language-chooser .aqua-header-localization-menu li:not(:last-child),
-.footer-language-chooser-tablet .aqua-header-localization-menu li:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .aqua-header-localization-menu {
@@ -132,14 +67,6 @@
 
   .aqua-header-localization-menu li {
     padding: 8px 12px;
-    font-size: 13px;
-  }
-}
-
-/* Hide desktop header language chooser below 1280px (handled by desktop header display) */
-/* Show footer language chooser below 834px, hide above */
-@media (min-width: 1280px) {
-  .footer-language-chooser {
-    display: none !important;
+    font-size: 16px;
   }
 }
