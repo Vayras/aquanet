@@ -86,7 +86,7 @@ section.aqua-hero .section-content {
 }
 
 .section-media .main-image.limited-width-phone-image {
-  max-width: 327px;
+  max-width: 277px;
 }
 
 .section-background-container {
@@ -134,7 +134,7 @@ section.aqua-hero .section-content {
   }
 
   .section-media .main-image.limited-width-phone-image {
-    max-width: 250px; /* 300px */
+    max-width: 250px;
   }
 }
 
