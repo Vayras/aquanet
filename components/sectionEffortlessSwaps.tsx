@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import DownloadModal from "./downloadModal";
 
 export default function SectionEffortlessSwaps() {
+  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -28,11 +30,10 @@ export default function SectionEffortlessSwaps() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h3 className="section-title">
-              EFFORTLESS SWAPS
+              {t('features_page_effortless_swaps_title')}
             </h3>
             <p className="text-subtitle font-semi-bold">
-              AQUA is the only Bitcoin wallet with easy on-the-fly swaps, allowing users to put Bitcoin on Layer 2 for quick
-              access to Lightning payments or stablecoins.
+              {t('features_page_effortless_swaps_description')}
             </p>
               <a
               href="#"
@@ -43,7 +44,7 @@ export default function SectionEffortlessSwaps() {
               className="aqua-button aqua-download-button"
               data-aqua-modal
             >
-              Get The App →
+              {t('button_get_the_app')}
             </a>
           </motion.div>
         <motion.div

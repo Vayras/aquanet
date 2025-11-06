@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function SectionStandardTwo() {
+  const { t } = useTranslation();
   const scrollToNewsletterAndFocus = () => {
     const newsletterForm = document.getElementById("jan3-newsletter-form");
     if (newsletterForm) {
@@ -30,13 +32,13 @@ export default function SectionStandardTwo() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="section-title">
-            BE YOUR OWN BANK WITH AQUA
+            {t('section_title_be_your_own_bank')}
           </h3>
           <p className="text-subtitle font-semi-bold">
-            AQUA's built-in Marketplace allows you to buy Bitcoin directly into self custody in many regions.  Prepaid Visa Dolphin Cards are on their way as well as peer-to-peer financial services like lending, borrowing, and bill-pay.  Everything you need in one app!
+            {t('section_subtitle_be_your_own_bank')}
           </p>
           <button onClick={scrollToNewsletterAndFocus} className="aqua-button aqua-download-button">
-            Get Notified!
+            {t('button_get_notified')}
           </button>
         </motion.div>
         <motion.div

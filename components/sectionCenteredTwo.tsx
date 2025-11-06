@@ -1,8 +1,10 @@
 "use client"
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function SectionCenteredTwo() {
+  const { t } = useTranslation();
   return (
     <section className="section-centered primary-inverse with-video-bg">
       <div className="section-content">
@@ -14,10 +16,10 @@ export default function SectionCenteredTwo() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="section-title">
-            PRIVATE AND CHEAP USDT TRANSFERS
+            {t('section_title_usdt_cheap_transfers')}
           </h3>
           <p className="text-subtitle font-semi-bold">
-            Sending digital dollars around the world is now cheaper than ever thanks to Tether USDt and the Liquid Network. Don't pay more fees than you need to!
+            {t('section_subtitle_usdt_transfers')}
           </p>
         </motion.div>
         <motion.div

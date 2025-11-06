@@ -81,6 +81,22 @@ input::placeholder {
   display: none;
 }
 
+.aqua-faq-answer a {
+  color: #0D6EFD;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem; /* 4px */
+}
+
+.aqua-faq-answer a:hover {
+  text-decoration: underline;
+}
+
+.aqua-faq-link-icon {
+  display: inline-block;
+}
+
 .aqua-download-buttons {
   display: flex;
   flex-wrap: wrap;

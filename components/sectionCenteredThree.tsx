@@ -1,7 +1,9 @@
 "use client"
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function SectionCenteredThree() {
+  const { t } = useTranslation();
   return (
     <section className="section-centered">
       <div className="section-content">
@@ -13,10 +15,10 @@ export default function SectionCenteredThree() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="section-title">
-            SEND & RECEIVE USDt
+            {t('section_title_send_receive_usdt')}
           </h3>
           <p className="text-subtitle font-semi-bold">
-            AQUA enables native Tether USDt support on Liquid and across the most popular USDt blockchains.
+            {t('section_subtitle_send_receive_usdt')}
           </p>
         </motion.div>
 
@@ -37,10 +39,10 @@ export default function SectionCenteredThree() {
                 </svg>
               </div>
               <h5>
-                USDt Support
+                {t('feature_card_usdt_support_title')}
               </h5>
               <p>
-                With reliable USDt support across key blockchains, you can move dollars globally, avoid volatility, and unlock new financial tools. It's a simpler way to access dollars.
+                {t('feature_card_usdt_support_description')}
               </p>
             </article>
             <article className="aqua-card">
@@ -52,10 +54,10 @@ export default function SectionCenteredThree() {
                 </svg>
               </div>
               <h5>
-                Access Dollars<br />With Low Fees
+                {t('feature_card_access_dollars_title')}
               </h5>
               <p>
-                Get reliable access to USDt without a bank account. AQUA allows you to save and spend in dollars opening up financial opportunities for people everywhere.
+                {t('feature_card_access_dollars_description')}
               </p>
             </article>
             <article className="aqua-card">
@@ -68,10 +70,10 @@ export default function SectionCenteredThree() {
                 </svg>
               </div>
               <h5>
-                No Gas Token Required
+                {t('feature_card_no_gas_token_title')}
               </h5>
               <p>
-                Pay network fees directly in USDt, no need for additional gas tokens. AQUA simplifies stablecoin transactions, giving you maximum flexibility and a streamlined experience!
+                {t('feature_card_no_gas_token_description')}
               </p>
             </article>
           </div>
